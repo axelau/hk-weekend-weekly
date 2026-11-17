@@ -136,6 +136,29 @@
   }
   .tile-body-lead { padding: 22px 22px 24px; }
 
+  .tile-media {
+    position: relative;
+    overflow: hidden;
+    background: var(--soft);
+    border-radius: 0;
+    aspect-ratio: 16 / 10;
+    width: 100%;
+  }
+  .grid-lead .tile:first-child .tile-media { aspect-ratio: 16 / 9; }
+  .tile-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    transform: scale(1);
+    transition: transform 0.45s ease;
+  }
+  .tile:hover .tile-media img { transform: scale(1.06); }
+  @media (hover: none) {
+    .tile:hover .tile-media img { transform: scale(1); }
+  }
+
   .feat-num {
     margin: 0 0 6px;
     font-size: 11px;
@@ -281,7 +304,7 @@
       <a href="#market">市集</a>
       <a href="#mall">商場聖誕／展覽</a>
       <a href="#ticket">購票</a>
-      <a href="#done">已完／未到</a>
+      <a href="#preview">下週預告</a>
     </div>
   </nav>
   <main class="wrap">
@@ -301,32 +324,37 @@
     <hr class="section-rule">
     <p class="sec-label" id="featured">最推五個</p>
     <div class="grid grid-lead">
-<article class="tile tile-lg tile-lead tile-text">
-  <div class="tile-body tile-body-lead">
+<article class="tile tile-lg tile-lead">
+  <div class="tile-media"><img src="assets/feat-01.jpg" alt="國泰西九爵士音樂節（免費海濱＋美食市集）" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body tile-body-lead">
     <p class="feat-num">01</p>
     <h3 class="headline">國泰西九爵士音樂節（免費海濱＋美食市集）</h3>
     <p class="why">六日約下午 1 時至晚上 10 時半，藝術公園有免費演出同餐飲市集，維港海旁聽歌食嘢一日都唔悶。</p>
   </div>
-</article><article class="tile tile-sm tile-text">
-  <div class="tile-body">
+</article><article class="tile tile-sm">
+  <div class="tile-media"><img src="assets/feat-02.jpg" alt="旅發局「香港繽紛冬日巡禮」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
     <p class="feat-num">02</p>
     <h3 class="headline">旅發局「香港繽紛冬日巡禮」</h3>
     <p class="why">11/18 先開，頭一個完整週末：中環皇后像廣場 22 米聖誕樹（週末 11:00–23:30，6 時亮燈；7–11 時有光影），尖沙咀文化中心一帶同樣免費睇燈。</p>
   </div>
-</article><article class="tile tile-sm tile-text">
-  <div class="tile-body">
+</article><article class="tile tile-sm">
+  <div class="tile-media"><img src="assets/feat-03.jpg" alt="The Big Picnic 2026" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
     <p class="feat-num">03</p>
     <h3 class="headline"><a href="https://thebigpicnichk.com/event-info" target="_blank" rel="noopener noreferrer">The Big Picnic 2026</a></h3>
     <p class="why">只 11/21 11:00–22:00｜愉景灣大白灣｜七年再辦嘅沙灘音樂野餐；要票，想去要早決定。</p>
   </div>
-</article><article class="tile tile-sm tile-text">
-  <div class="tile-body">
+</article><article class="tile tile-sm">
+  <div class="tile-media"><img src="assets/feat-04.jpg" alt="亞裔藝采+ 2026" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
     <p class="feat-num">04</p>
     <h3 class="headline"><a href="https://www.cpo.gov.hk/zh-hk/activity/tc-aecp-2026-carnival/" target="_blank" rel="noopener noreferrer">亞裔藝采+ 2026</a></h3>
     <p class="why">只 11/22 14:00–18:00｜文化中心｜免費；約 30 個國家地區表演同小食，夜晚可接尖沙咀光影。</p>
   </div>
-</article><article class="tile tile-sm tile-text">
-  <div class="tile-body">
+</article><article class="tile tile-sm">
+  <div class="tile-media"><img src="assets/feat-05.jpg" alt="船到橋頭生活節" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
     <p class="feat-num">05</p>
     <h3 class="headline"><a href="https://www.interislandfestival.live/" target="_blank" rel="noopener noreferrer">船到橋頭生活節</a></h3>
     <p class="why">本週末梅窩 wknd 市集（11:00–17:00，免費），六有營火晚會；適合吹海風慢遊。</p>
@@ -337,7 +365,8 @@
     <hr class="section-rule">
     <p class="sec-label" id="carnival">完整清單｜大型／海濱／社區嘉年華</p>
     <div class="grid grid-cards">
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/feat-01.jpg" alt="國泰西九爵士音樂節" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-mix">免費／要票</span><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline"><a href="https://cultural.cityline.com.hk/tc/2026/jazzfest2026.html" target="_blank" rel="noopener noreferrer">國泰西九爵士音樂節</a></h3>
 <p class="when">11/21–22 免費戶外為主（節期 11/13–24）</p>
@@ -345,7 +374,8 @@
 <p class="blurb">免費場約下午 1 時至晚上 10 時半；<strong>六、日大草坪餐飲市集約 14:00–23:00</strong>。西九官網有時抓取被攔，完整分時表出發前再對 <a href="https://www.westk.hk/" target="_blank" rel="noopener noreferrer">westk.hk</a>。<strong>售票場</strong>（自由空間大盒）：六 15:00／20:00 JACE × Teriver（約 $580）；日 20:00 Francesca Tandoi（約 $400）。Kenny G 壓軸係 <strong>11/24（二）</strong>，唔屬本週末。</p>
 <p class="sources">來源：<a href="https://cultural.cityline.com.hk/tc/2026/jazzfest2026.html" target="_blank" rel="noopener noreferrer">Cityline 節目頁</a> · <a href="https://www.westk.hk/" target="_blank" rel="noopener noreferrer">westk.hk</a>　報道／導覽：<a href="https://jazznode.com/zh/magazine/festival-feature-westk-jazz-fest-1793792286521" target="_blank" rel="noopener noreferrer">JazzNode</a> · <a href="https://www.hkcd.com/hkcdweb/content/2026/11/11/content_8784838.html" target="_blank" rel="noopener noreferrer">香港商報</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-07-winter-wonderland-central.jpg" alt="冬日小鎮．中環" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-central.html" target="_blank" rel="noopener noreferrer">冬日小鎮．中環</a></h3>
 <p class="when">11/18–1/5｜本週末 11:00–23:30</p>
@@ -353,7 +383,8 @@
 <p class="blurb">免費；6 時亮燈，7–11 時光影</p>
 <p class="sources">來源：<a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-central.html" target="_blank" rel="noopener noreferrer">旅發局</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-08-winter-wonderland-tst.jpg" alt="冬日小鎮．尖沙咀" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html" target="_blank" rel="noopener noreferrer">冬日小鎮．尖沙咀</a></h3>
 <p class="when">同上檔期</p>
@@ -361,7 +392,8 @@
 <p class="blurb">7–11 時免費光影</p>
 <p class="sources">來源：<a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html" target="_blank" rel="noopener noreferrer">旅發局</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/feat-04.jpg" alt="亞裔藝采+ 2026" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.cpo.gov.hk/zh-hk/activity/tc-aecp-2026-carnival/" target="_blank" rel="noopener noreferrer">亞裔藝采+ 2026</a></h3>
 <p class="when">只 11/22 14:00–18:00</p>
@@ -369,7 +401,8 @@
 <p class="blurb"><strong>免費</strong>；約 30 個「一帶一路」國家同地區舞蹈、音樂、攤位、工作坊。同場「盛禮薈萃──民族文化展覽」11/22–29（22 日 14:00–23:00）。</p>
 <p class="sources">來源：<a href="https://www.cpo.gov.hk/zh-hk/activity/tc-aecp-2026-carnival/" target="_blank" rel="noopener noreferrer">文化禮賓處</a> · <a href="https://www.info.gov.hk/gia/general/202611/13/P2026111300279.htm" target="_blank" rel="noopener noreferrer">新聞公報</a> · <a href="https://www.discoverhongkong.com/tc/events/event.id89682.%E4%BA%9E%E8%A3%94%E8%97%9D%E9%87%87-2026.html" target="_blank" rel="noopener noreferrer">旅發局</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-10-art-container.jpg" alt="藝術貨櫃啟航展覽暨嘉年華" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.hkmpdb.gov.hk/tc/event-details-202611-3.html" target="_blank" rel="noopener noreferrer">藝術貨櫃啟航展覽暨嘉年華</a></h3>
 <p class="when">展覽 11/15–25 10:00–21:30；嘉年華只 11/21–22 11:00–17:00</p>
@@ -377,7 +410,8 @@
 <p class="blurb">免費：藝術貨櫃、互動遊戲、表演；當日海事博物館免費入場</p>
 <p class="sources">來源：<a href="https://www.hkmpdb.gov.hk/tc/event-details-202611-3.html" target="_blank" rel="noopener noreferrer">發展局海港辦事處</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-11-wellness-sports-street.jpg" alt="「活力街頭」運動嘉年華" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://jcfitcity.hk/zh-Hant/event/Wellness-Sports-Street-HKPA-2026112001" target="_blank" rel="noopener noreferrer">「活力街頭」運動嘉年華</a></h3>
 <p class="when">11/20–22 12:00–18:00</p>
@@ -385,7 +419,8 @@
 <p class="blurb">免費運動攤位</p>
 <p class="sources">來源：<a href="https://jcfitcity.hk/zh-Hant/event/Wellness-Sports-Street-HKPA-2026112001" target="_blank" rel="noopener noreferrer">JC FitCity</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/feat-05.jpg" alt="船到橋頭生活節" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-mix">免費／要票</span></div>
 <h3 class="headline"><a href="https://www.interislandfestival.live/iif3-2026-events" target="_blank" rel="noopener noreferrer">船到橋頭生活節</a></h3>
 <p class="when">本週末主場梅窩（至約 11/29）</p>
@@ -393,7 +428,8 @@
 <p class="blurb">重點：<a href="https://www.interislandfestival.live/iif3-2026-events/%E8%88%B9%E5%88%B0%E6%A9%8B%E9%A0%AD%E7%94%9F%E6%B4%BB%E7%AF%80-x-wknd-%E5%B8%82%E5%A0%B4" target="_blank" rel="noopener noreferrer">wknd 市集</a> <strong>11/21–22 11:00–17:00</strong>｜<strong>免費</strong>。另有營火晚會（六晚）等，<strong>部分要票／報名</strong>，以官網各場頁為準。</p>
 <p class="sources">來源：<a href="https://www.interislandfestival.live/iif3-2026-events" target="_blank" rel="noopener noreferrer">船到橋頭生活節</a> · <a href="https://www.interislandfestival.live/iif3-2026-events/%E8%88%B9%E5%88%B0%E6%A9%8B%E9%A0%AD%E7%94%9F%E6%B4%BB%E7%AF%80-x-wknd-%E5%B8%82%E5%A0%B4" target="_blank" rel="noopener noreferrer">wknd 市集</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-13-oi-fresh.jpg" alt="油街 Fresh!同樂" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.apo.hk/tc/web/apo/oi_oi_fresh.html" target="_blank" rel="noopener noreferrer">油街 Fresh!同樂</a></h3>
 <p class="when">只 11/22 10:00–18:00</p>
@@ -401,7 +437,8 @@
 <p class="blurb">免費（博物館節）；社區野餐、工作坊（部分要報名）</p>
 <p class="sources">來源：<a href="https://www.apo.hk/tc/web/apo/oi_oi_fresh.html" target="_blank" rel="noopener noreferrer">油街實現</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-14-fireboat-discovery-day.jpg" alt="葛量洪號滅火輪展覽館探索日" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline">葛量洪號滅火輪展覽館探索日</h3>
 <p class="when">只 11/21 10:00–18:00</p>
@@ -409,7 +446,8 @@
 <p class="blurb">免費：駕駛室、噴水／救援示範、導賞。有整理指節目表曾寫 11/22 待定，海報／報道多寫 11/21，出發前再對官方。</p>
 <p class="sources">來源：<a href="https://hk.history.museum/tc/web/mh/about-us/fireboat-alexander-grantham-exhibition-gallery.html" target="_blank" rel="noopener noreferrer">歷史博物館展覽館頁</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-15-star-playground.jpg" alt="太空館「星空遊樂園」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://hk.space.museum/tc/web/spm/activities/musefest.html" target="_blank" rel="noopener noreferrer">太空館「星空遊樂園」</a></h3>
 <p class="when">只 11/21 19:00–21:00</p>
@@ -417,7 +455,8 @@
 <p class="blurb">天台觀星免費（18:30 正門派證，額滿即止）；天氣欠佳改室內</p>
 <p class="sources">來源：<a href="https://hk.space.museum/tc/web/spm/activities/musefest.html" target="_blank" rel="noopener noreferrer">香港太空館</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/feat-03.jpg" alt="The Big Picnic" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-ticket">要票</span></div>
 <h3 class="headline"><a href="https://thebigpicnichk.com/" target="_blank" rel="noopener noreferrer">The Big Picnic</a></h3>
 <p class="when">只 11/21 11:00–22:00</p>
@@ -425,7 +464,8 @@
 <p class="blurb">本地樂隊、飲食、<a href="https://www.handmadehongkong.com/event/handmade-hong-kong-at-the-big-picnic-november-2026/" target="_blank" rel="noopener noreferrer">Handmade HK 市集 11:00–20:00</a>｜<strong>要票</strong>（整理寫 GA 約 $258，5–17 歲約 $150，5 歲以下免費；以<a href="https://thebigpicnichk.com/tickets" target="_blank" rel="noopener noreferrer">官網售票頁</a>為準）</p>
 <p class="sources">來源：<a href="https://thebigpicnichk.com/" target="_blank" rel="noopener noreferrer">The Big Picnic</a> · <a href="https://thebigpicnichk.com/tickets" target="_blank" rel="noopener noreferrer">售票頁</a> · <a href="https://www.handmadehongkong.com/event/handmade-hong-kong-at-the-big-picnic-november-2026/" target="_blank" rel="noopener noreferrer">Handmade HK 市集</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-17-hangover-festival.webp" alt="HANGOVER FESTIVAL 2026" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-ticket">要票</span></div>
 <h3 class="headline"><a href="https://www.hangoverhk.com/festival" target="_blank" rel="noopener noreferrer">HANGOVER FESTIVAL 2026</a></h3>
 <p class="when">只 11/21 15:00–22:00</p>
@@ -433,7 +473,8 @@
 <p class="blurb">要票（GA $680／VIP $880）</p>
 <p class="sources">來源：<a href="https://www.hangoverhk.com/festival" target="_blank" rel="noopener noreferrer">HANGOVER HK</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-18-db-winter-wonderland.jpg" alt="愉景灣意式冬日慶典" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline">愉景灣意式冬日慶典</h3>
 <p class="when">報道寫 11/20 亮燈，裝置／活動至約 1/3</p>
@@ -445,62 +486,71 @@
     <hr class="section-rule">
     <p class="sec-label" id="market">市集</p>
     <div class="grid grid-cards">
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-19-v-mart.jpg" alt="V Mart 維園市集" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <h3 class="headline"><a href="https://www.discoverhongkong.com/tc/events/event.id86002.%E7%B6%AD%E5%9C%92%E5%B8%82%E9%9B%86.html" target="_blank" rel="noopener noreferrer">V Mart 維園市集</a></h3>
 <p class="when">逢六日及紅日至約 11/29 12:00–21:00</p>
 <p class="place">噴水池／南亭廣場</p>
 <p class="blurb">上週末藝趣嘉年華已完，呢個週末應回復常規（官方註明或因大型活動調整）</p>
 <p class="sources">來源：<a href="https://www.discoverhongkong.com/tc/events/event.id86002.%E7%B6%AD%E5%9C%92%E5%B8%82%E9%9B%86.html" target="_blank" rel="noopener noreferrer">旅發局</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-20-2-pants-weekend-market.jpg" alt="2 Pants Weekend Market @ Fashion Walk" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <h3 class="headline"><a href="https://www.hanglungmalls.com/whats-happening/6af6cceb56872a000216f3f0" target="_blank" rel="noopener noreferrer">2 Pants Weekend Market @ Fashion Walk</a></h3>
 <p class="when">報道指 11/21、22（及 28、29）12:00–19:00</p>
 <p class="place">銅鑼灣百德新街</p>
 <p class="sources">來源：<a href="https://www.hanglungmalls.com/whats-happening/6af6cceb56872a000216f3f0" target="_blank" rel="noopener noreferrer">恒隆商場</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-21-pong-the-vibe.jpg" alt="Fashion Walk「PONG the VIBE」麻雀彩繪工作坊／「百德麻雀開局」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline">Fashion Walk「PONG the VIBE」麻雀彩繪工作坊／「百德麻雀開局」</h3>
 <p class="when">麻雀彩繪工作坊逢六日 14:00–17:00；「百德麻雀開局」只 11/21 12:30–16:30，$288</p>
 <p class="place">Fashion Walk</p>
 <p class="sources">報道／導覽：<a href="https://konggokhk.com/fashion_walk_pong_vibe_weekend_market_2026/" target="_blank" rel="noopener noreferrer">港講</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-22-soho-market.jpg" alt="SOHO MARKET 11月生活市集 @ D·PARK" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline"><a href="https://hkhandicraft.com/fair/detail/id/7D16YjRp" target="_blank" rel="noopener noreferrer">SOHO MARKET 11月生活市集 @ D·PARK</a></h3>
 <p class="when">11/21–22 12:00–20:00</p>
 <p class="place">荃灣愉景新城 L2（11 月四個週末都有）</p>
 <p class="sources">報道／導覽：<a href="https://hkhandicraft.com/fair/detail/id/7D16YjRp" target="_blank" rel="noopener noreferrer">HK Handicraft</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-23-life-mart.jpg" alt="LIFE MART 九週年市集" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline"><a href="https://hkhandicraft.com/fair/detail/id/7D16rLRp" target="_blank" rel="noopener noreferrer">LIFE MART 九週年市集</a></h3>
 <p class="when">11/21–22 13:00–20:00</p>
 <p class="place">D2 Place ONE 2/F THE SPACE</p>
 <p class="sources">報道／導覽：<a href="https://hkhandicraft.com/fair/detail/id/7D16rLRp" target="_blank" rel="noopener noreferrer">HK Handicraft</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-24-618-shanghai-street.jpg" alt="618 上海街「秋日生活・療癒小物市集」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline"><a href="https://hkhandicraft.com/fair/detail/id/EyaNBMDe" target="_blank" rel="noopener noreferrer">618 上海街「秋日生活・療癒小物市集」</a></h3>
 <p class="when">11/21 12:00–11/22 20:00</p>
 <p class="place">旺角 618 上海街</p>
 <p class="sources">報道／導覽：<a href="https://hkhandicraft.com/fair/detail/id/EyaNBMDe" target="_blank" rel="noopener noreferrer">HK Handicraft</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-25-figurecross-sleeping-pen.jpg" alt="Figurecross × Sleeping Pen「入治癒室撳緊急掣」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline"><a href="https://hkhandicraft.com/fair/detail/id/eDW8mQRW" target="_blank" rel="noopener noreferrer">Figurecross × Sleeping Pen「入治癒室撳緊急掣」</a></h3>
 <p class="when">11/20–22 12:00–20:00</p>
 <p class="place">啟德 AIRSIDE 3／4 樓購物走廊</p>
 <p class="sources">報道／導覽：<a href="https://hkhandicraft.com/fair/detail/id/eDW8mQRW" target="_blank" rel="noopener noreferrer">HK Handicraft</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-26-figurecross-the-lab.jpg" alt="Figurecross The Lab Market @ 德福廣場" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline"><a href="https://www.hkhandicraft.com/fair/detail/id/Lk7vBbRo" target="_blank" rel="noopener noreferrer">Figurecross The Lab Market @ 德福廣場</a></h3>
 <p class="when">本週末屬 11/20–12/3 這期｜每日約 12:00–20:00</p>
 <p class="place">MCL 戲院平台入口樓層</p>
 <p class="sources">報道／導覽：<a href="https://www.hkhandicraft.com/fair/detail/id/Lk7vBbRo" target="_blank" rel="noopener noreferrer">HK Handicraft</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-27-asian-cultural-festival.jpg" alt="Asian Cultural Festival" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-ticket">要票</span></div>
 <h3 class="headline"><a href="https://www.japanautumnfesinhk.net/en-GB/activity/185" target="_blank" rel="noopener noreferrer">Asian Cultural Festival</a></h3>
 <p class="when">11/21–22</p>
@@ -512,7 +562,8 @@
     <hr class="section-rule">
     <p class="sec-label" id="mall">商場聖誕／展覽／設計</p>
     <div class="grid grid-cards">
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-28-festival-of-wonders.jpg" alt="太古城 Festival of Wonders" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.cityplaza.com/zh-hk/whatshot/events/2026/festival-of-wonders" target="_blank" rel="noopener noreferrer">太古城 Festival of Wonders</a></h3>
 <p class="when">11/12–1/3｜週末 11:00–21:00（平日 12:00–21:00）</p>
@@ -520,7 +571,8 @@
 <p class="blurb">免費</p>
 <p class="sources">來源：<a href="https://www.cityplaza.com/zh-hk/whatshot/events/2026/festival-of-wonders" target="_blank" rel="noopener noreferrer">太古城</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-29-dreaming-of-christmas.jpg" alt="太古廣場／星街「聖誕夜之夢」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-mix">免費／要票</span></div>
 <h3 class="headline"><a href="https://www.pacificplace.com.hk/zh-hk/entertainment/happenings/christmas-2026" target="_blank" rel="noopener noreferrer">太古廣場／星街「聖誕夜之夢」</a></h3>
 <p class="when">11/13–1/3</p>
@@ -536,14 +588,16 @@
 <p class="blurb">整理多寫每日 10:30–22:30、免費。出稿當日未取到商場獨立活動頁。</p>
 <p class="sources">報道／導覽：<a href="https://www.wenweipo.com/a/202611/03/AP6ae95755e4b0fa89498ba02a.html" target="_blank" rel="noopener noreferrer">文匯報</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-31-teddy-lulu.jpg" alt="奧海城 Teddy LuLu 聖誕時光之旅" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <h3 class="headline"><a href="https://www.olympiancity.com.hk/en/Promotion/722" target="_blank" rel="noopener noreferrer">奧海城 Teddy LuLu 聖誕時光之旅</a></h3>
 <p class="when">11/14–1/3 11:00–21:00</p>
 <p class="place">2 期地下中庭</p>
 <p class="blurb">13 米復古列車、7 米樹；週末有串珠站 13:00–18:00。角色見面係 11/15、11/29 等周日，呢個周日 11/22 冇場。</p>
 <p class="sources">來源：<a href="https://www.olympiancity.com.hk/en/Promotion/722" target="_blank" rel="noopener noreferrer">奧海城</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-32-pixar-holiday-magic.jpg" alt="AIRSIDE Pixar Holiday Magic" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <h3 class="headline"><a href="https://www.airside.com.hk/happenings/pixar-airside-holiday-magic" target="_blank" rel="noopener noreferrer">AIRSIDE Pixar Holiday Magic</a></h3>
 <p class="when">11/13–1/3</p>
 <p class="place">2 樓中庭四大場景＋地下 6 米樹＋限定店（11:00–21:00）</p>
@@ -558,7 +612,8 @@
 <p class="blurb">免費 11 個復古航空互動位；見聖誕老人捐款預約 <strong>11/26</strong> 先開。<strong>出稿當日 ifc 官方 Happenings 頁尚未獨立列出，出發前再對 </strong><a href="https://ifc.com.hk/" target="_blank" rel="noopener noreferrer">ifc.com.hk</a>。</p>
 <p class="sources">來源：<a href="https://ifc.com.hk/" target="_blank" rel="noopener noreferrer">ifc</a>　報道／導覽：<a href="https://www.littlestepsasia.com/hong-kong/events/mall-events/ifc-mall-events/" target="_blank" rel="noopener noreferrer">Little Steps</a> · <a href="https://thehkhub.com/ifc-mall-christmas-display-2026-dates-activities-and-how-to-meet-santa/" target="_blank" rel="noopener noreferrer">The HK HUB</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-34-facesss-sonny-angel.jpg" alt="海港城 60 周年「Christmas Togetherness」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-report">報道／導覽</span></div>
 <h3 class="headline">海港城 60 周年「Christmas Togetherness」</h3>
 <p class="when">文匯／經濟通報導 11/19–1/3</p>
@@ -566,7 +621,8 @@
 <p class="blurb">40 米、三層復刻聖誕火車站。<strong>出稿當日官方 Happenings 未見 2026 獨立活動頁，以現場／出發前官網為準</strong>。另官方已列：<a href="https://www.harbourcity.com.hk/tc/article/facesss-sonnyangel/" target="_blank" rel="noopener noreferrer">Facesss × Sonny Angel「Cat Christmas」</a> 11/5–1/10。</p>
 <p class="sources">來源：<a href="https://www.harbourcity.com.hk/tc/article/facesss-sonnyangel/" target="_blank" rel="noopener noreferrer">Facesss × Sonny Angel</a>　報道／導覽：<a href="https://www.wenweipo.com/a/202611/12/AP6af415f4e4b028ec01938275.html" target="_blank" rel="noopener noreferrer">文匯報</a> · <a href="https://www.etnet.com.hk/www/tc/lifestyle/416115/" target="_blank" rel="noopener noreferrer">etnet</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-35-bigbang-peak-galleria.jpg" alt="山頂廣場 BIGBANG《XX:COSMOS》二十週年紀念空間" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://hanglungmalls.com/whats-happening/6ae04292ce231d0002df7b27" target="_blank" rel="noopener noreferrer">山頂廣場 BIGBANG《XX:COSMOS》二十週年紀念空間</a></h3>
 <p class="when">11/9–22（最後一個週末）10:00–21:00</p>
@@ -582,7 +638,8 @@
 <p class="blurb">要票約 $150＋$20 行政費（同山頂免費展係兩件事）</p>
 <p class="sources">報道／導覽：<a href="https://www.wenweipo.com/a/202611/09/AP6af18986e4b028ec0193455b.html" target="_blank" rel="noopener noreferrer">文匯報</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-37-takada-akemi.jpg" alt="高田明美世界名作展 @ 海港城" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.harbourcity.com.hk/tc/article/takada-akemi-world-masterpiece-exhibition-2026/" target="_blank" rel="noopener noreferrer">高田明美世界名作展 @ 海港城</a></h3>
 <p class="when">至 11/29 11:00–21:00</p>
@@ -590,7 +647,8 @@
 <p class="blurb">免費</p>
 <p class="sources">來源：<a href="https://www.harbourcity.com.hk/tc/article/takada-akemi-world-masterpiece-exhibition-2026/" target="_blank" rel="noopener noreferrer">海港城</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-38-disgusting-food-museum.jpg" alt="《嘔心食物博物館》@ AIRSIDE" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-ticket">要票</span></div>
 <h3 class="headline"><a href="https://www.airside.com.hk/zh-hk/happenings/disgusting-food-museum" target="_blank" rel="noopener noreferrer">《嘔心食物博物館》@ AIRSIDE</a></h3>
 <p class="when">至 11/26（呢個係最後一個週末）｜五至日 11:00–20:00</p>
@@ -598,7 +656,8 @@
 <p class="blurb">約 $48 起</p>
 <p class="sources">來源：<a href="https://www.airside.com.hk/zh-hk/happenings/disgusting-food-museum" target="_blank" rel="noopener noreferrer">AIRSIDE</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-39-detour-2026.jpg" alt="deTour 2026 設計節 @ PMQ" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-free">免費</span></div>
 <h3 class="headline"><a href="https://www.pmq.org.hk/event/detour-2026-design-festival/?lang=ch" target="_blank" rel="noopener noreferrer">deTour 2026 設計節 @ PMQ</a></h3>
 <p class="when">11/20–29；21–29 日 11:00–20:00</p>
@@ -614,7 +673,8 @@
 <p class="blurb">新聞稿寫 19–21 日公眾免費，建議先到<a href="https://designinspire.hktdc.com/tc/s/Visitors-Registration?cat=artmate" target="_blank" rel="noopener noreferrer">參觀人士登記</a>。</p>
 <p class="sources">來源：<a href="https://designinspire.hktdc.com/en/s/Expo-Details" target="_blank" rel="noopener noreferrer">DesignInspire</a> · <a href="https://designinspire.hktdc.com/tc/s/Visitors-Registration?cat=artmate" target="_blank" rel="noopener noreferrer">參觀人士登記</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-41-muse-pop-fest.webp" alt="MUSE Pop Fest @ 圍方" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <h3 class="headline"><a href="https://www.microworksacg.com/blogs/popup/muse-pop-fest-2026" target="_blank" rel="noopener noreferrer">MUSE Pop Fest @ 圍方</a></h3>
 <p class="when">至 11/23</p>
 <p class="place">圍方</p>
@@ -627,7 +687,8 @@
 <p class="blurb">MOSTown 貓主題、Mira Place、Landmark Gloucester Hotel（約 11/20 起）、又一城 Pokémon。部分日期來自綜合導覽／報道，出發前再對商場官網。</p>
 <p class="sources">報道／導覽：<a href="https://www.littlestepsasia.com/hong-kong/events/seasonal-events-guides/shopping-mall-christmas-decorations/" target="_blank" rel="noopener noreferrer">Little Steps</a></p>
 </div></article>
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-43-east-point-city-winterverse.jpg" alt="東港城「超次元冬幻祭」" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <h3 class="headline"><a href="https://www.eastpointcity.com.hk/shk_promotion/east-point-city-winterverse/" target="_blank" rel="noopener noreferrer">東港城「超次元冬幻祭」</a></h3>
 <p class="when">第一階段模型／遙控車展官方寫做到 11/17，已完。官方頁仍列 11/21 1:00–5:00 馬賽克工作坊（會員消費換領）</p>
 <p class="place">東港城</p>
@@ -637,7 +698,8 @@
     <hr class="section-rule">
     <p class="sec-label" id="ticket">大型購票</p>
     <div class="grid grid-cards">
-<article class="tile event"><div class="tile-body">
+<article class="tile event"><div class="tile-media"><img src="assets/card-44-hk-open-badminton.jpg" alt="李寧 2026 香港公開羽毛球錦標賽" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="tile-body">
 <div class="meta-row"><span class="pill pill-ticket">要票</span></div>
 <h3 class="headline"><a href="https://www.discoverhongkong.com/eng/events/event.id90642.hong-kong-open-badminton-championships-2026.html" target="_blank" rel="noopener noreferrer">李寧 2026 香港公開羽毛球錦標賽</a></h3>
 <p class="when">至 11/22</p>
@@ -648,8 +710,8 @@
     </div>
     <p class="aside">西九爵士售票場、The Big Picnic、HANGOVER FESTIVAL — 見上。</p>
     <hr class="section-rule">
-    <p class="sec-label" id="done">已完／未到（唔使去）</p>
-    <div class="bottom-wrap" id="done-boxes">
+    <p class="sec-label" id="preview">下週預告</p>
+    <div class="bottom-wrap" id="preview-boxes">
     <section class="bottom-box">
       <h2 class="bottom-h">已完</h2>
       <p class="bottom-intro"><strong>已完：</strong> 渣打藝趣嘉年華（11/14–15）；PMQ 比利時朱古力節；文化博物館同樂日（11/14）、三棟屋非遺同樂日（11/15）；北角匯「果」然好味、中環街市 Marketoo「秋肥風」（至 11/15）；南丫同樂日、道地綠地野營祭、Shi Fu Miz、Biodyna 酒節、朗豪坊食雞翼市集；東港城第一階段車展（至 11/17）；美食嘉年華（至 11/1）。</p>
