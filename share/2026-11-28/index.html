@@ -4,23 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#f7f4ef">
+<meta name="theme-color" content="#f6f3ee">
 <meta name="description" content="放假指導員「即將到來週末外出報告」：2026年11月28日（六）–29日（日）香港外出整理。出稿 2026-11-23（香港時間）。">
 <title>週末外出｜2026年11月28日（六）–29日（日）</title>
 <style>
   :root {
-    --bg: #f7f4ef;
+    --bg: #f6f3ee;
+    --card: #fffcf7;
     --ink: #161513;
     --muted: #3a3732;
     --link: #0a3d8f;
     --visited: #5c1f78;
-    --line: #c8c1b6;
+    --line: #d0c9be;
+    --h1: clamp(1.9rem, 7vw, 2.25rem);
+    --section: 1.2rem;
+    --title: 1.5rem;
+    --place: 1.0625rem;
+    --body: 0.9375rem;
   }
   * { box-sizing: border-box; }
-  html {
-    color-scheme: light;
-    scroll-behavior: smooth;
-  }
+  html { color-scheme: light; scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
   }
@@ -29,8 +32,8 @@
     background: var(--bg);
     color: var(--ink);
     font-family: "Noto Sans TC", "Noto Sans CJK TC", "PingFang TC", "Hiragino Sans CNS", "Hiragino Sans GB", "Microsoft JhengHei", "Heiti TC", system-ui, -apple-system, sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.7;
+    font-size: var(--body);
+    line-height: 1.65;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -40,23 +43,20 @@
     position: absolute;
     left: 0.75rem;
     top: 0.75rem;
-    padding: 0.6rem 0.85rem;
+    padding: 0.65rem 0.9rem;
     background: var(--ink);
     color: var(--bg);
     text-decoration: none;
     transform: translateY(-200%);
   }
-  .skip:focus {
-    transform: none;
-    z-index: 10;
-  }
+  .skip:focus { transform: none; z-index: 10; }
   .wrap {
     max-width: 40rem;
     margin: 0 auto;
-    padding: 1.75rem 1.25rem 3.75rem;
+    padding: 1.5rem 1.15rem 3.75rem;
   }
   header {
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.15rem;
     border-bottom: 2px solid var(--ink);
   }
   .kicker {
@@ -66,22 +66,23 @@
     font-weight: 700;
   }
   h1 {
-    margin: 0.4rem 0 0.85rem;
-    font-size: clamp(1.55rem, 6vw, 2.05rem);
-    line-height: 1.28;
+    margin: 0.4rem 0 0.9rem;
+    font-size: var(--h1);
+    line-height: 1.22;
     font-weight: 700;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
   }
   .credit, .orig {
     margin: 0 0 0.4rem;
     color: var(--muted);
+    font-size: var(--body);
   }
   .orig { margin-bottom: 0; }
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.15rem 0.15rem;
-    padding: 0.85rem 0 1.25rem;
+    gap: 0.15rem 0.2rem;
+    padding: 0.35rem 0 0.35rem;
     margin: 0 0 1.5rem;
     border-bottom: 1px solid var(--line);
   }
@@ -89,48 +90,73 @@
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    padding: 0.35rem 0.55rem 0.35rem 0;
-    margin-right: 0.7rem;
+    padding: 0.3rem 0.55rem 0.3rem 0;
+    margin-right: 0.45rem;
     color: var(--ink);
+    font-size: 0.9rem;
     text-underline-offset: 0.2em;
   }
   h2 {
-    margin: 2.35rem 0 1rem;
-    padding-bottom: 0.35rem;
-    font-size: 1.15rem;
+    margin: 2.4rem 0 1.05rem;
+    padding: 0.15rem 0 0.4rem;
+    font-size: var(--section);
     line-height: 1.35;
     font-weight: 700;
+    letter-spacing: 0.02em;
     border-bottom: 2px solid var(--ink);
   }
-  h2:first-of-type { margin-top: 0.25rem; }
-  h3 {
+  h2:first-of-type { margin-top: 0.15rem; }
+  .lead p {
+    margin: 0 0 1rem;
+    font-size: var(--body);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    margin: 0 0 1.25rem;
+    overflow: hidden;
+  }
+  .card-media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #e8e3da;
+  }
+  .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .card-body { padding: 1rem 1rem 1.15rem; }
+  .num {
     margin: 0 0 0.3rem;
-    font-size: 1.05rem;
-    line-height: 1.4;
+    font-size: 0.8rem;
     font-weight: 700;
-  }
-  p { margin: 0 0 0.7rem; }
-  .lead p { margin-bottom: 1rem; }
-  .pick, .item {
-    margin: 0 0 1.15rem;
-    padding: 0 0 1.15rem;
-    border-bottom: 1px solid var(--line);
-  }
-  .pick:last-child, .item:last-child { border-bottom: 0; padding-bottom: 0; }
-  .n {
-    display: inline-block;
-    min-width: 1.35em;
-    margin-right: 0.15em;
+    letter-spacing: 0.06em;
     font-variant-numeric: tabular-nums;
-  }
-  .meta {
     color: var(--muted);
-    margin-bottom: 0.5rem;
   }
-  .also {
-    margin: 0.25rem 0 0;
-    padding-top: 0.25rem;
+  h3.title {
+    margin: 0 0 0.45rem;
+    font-size: var(--title);
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.015em;
   }
+  .place {
+    margin: 0 0 0.7rem;
+    font-size: var(--place);
+    line-height: 1.45;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .content {
+    margin: 0;
+    font-size: var(--body);
+    color: var(--ink);
+  }
+  .content p { margin: 0 0 0.55rem; }
+  .content p:last-child { margin-bottom: 0; }
   a {
     color: var(--link);
     text-decoration: underline;
@@ -143,25 +169,49 @@
     outline: 2px solid var(--link);
     outline-offset: 3px;
   }
-  .src, .src p {
-    margin: 0.15rem 0 0;
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.9rem;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--line);
   }
-  .src a {
-    display: inline-block;
-    padding: 0.45rem 0;
-    overflow-wrap: anywhere;
+  .links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.4rem 0.1rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .links a:visited { color: var(--ink); }
+  .links .name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+  .links a:visited .name { color: var(--visited); }
+  .links .domain {
+    margin-top: 0.1rem;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: var(--muted);
     word-break: break-word;
-    line-height: 1.45;
   }
-  .foot-note {
+  .also, .foot-note, .list-block p {
     margin: 0 0 1rem;
+    font-size: var(--body);
   }
   footer.page {
-    margin-top: 2.75rem;
+    margin-top: 2.5rem;
     padding-top: 1.15rem;
     border-top: 2px solid var(--ink);
     color: var(--muted);
-    font-size: 0.95rem;
+    font-size: var(--body);
   }
   footer.page p { margin: 0 0 0.35rem; }
 </style>
@@ -187,275 +237,511 @@
 
 <main id="main">
 <section class="lead" aria-label="開頭說明">
-  <p>紅日：11/23–29 除 11/29（日）外冇額外公眾假期；下一個紅日係 12/25 聖誕 同 12/26。紅日先生確認（GovHK）：<br>
-  <span class="src"><a href="https://www.gov.hk/tc/about/abouthk/holiday/2026.htm" target="_blank" rel="noopener">https://www.gov.hk/tc/about/abouthk/holiday/2026.htm</a></span></p>
-  <p>已查過廠商會／葵涌類戶外美食嘉年華：第13屆香港美食嘉年華已於 11/1 完結，本週末葵涌運動場冇新一屆同類大型戶外美食展。想食檔口，今個週末最接近嘅大型戶外美食節係西九草坪嘅 Family Style Food Fest（要門票）。<br>
-  <span class="src"><a href="https://www.foodhk.com.hk/web/subpage.php?mid=110" target="_blank" rel="noopener">https://www.foodhk.com.hk/web/subpage.php?mid=110</a></span></p>
+  <p>紅日：11/23–29 除 11/29（日）外冇額外公眾假期；下一個紅日係 12/25 聖誕 同 12/26。紅日先生確認（GovHK）。</p>
+  <div class="links">
+    <a href="https://www.gov.hk/tc/about/abouthk/holiday/2026.htm" target="_blank" rel="noopener"><span class="name">香港政府假期表</span><span class="domain">gov.hk</span></a>
+  </div>
+  <p>已查過廠商會／葵涌類戶外美食嘉年華：第13屆香港美食嘉年華已於 11/1 完結，本週末葵涌運動場冇新一屆同類大型戶外美食展。想食檔口，今個週末最接近嘅大型戶外美食節係西九草坪嘅 Family Style Food Fest（要門票）。</p>
+  <div class="links">
+    <a href="https://www.foodhk.com.hk/web/subpage.php?mid=110" target="_blank" rel="noopener"><span class="name">廠商會美食嘉年華專頁</span><span class="domain">foodhk.com.hk</span></a>
+  </div>
   <p>銅鑼灣「冬日小鎮」同沙田新城市「星願水晶殿」已於 11/25 開，呢個係第一個完整週末，可以去。</p>
 </section>
 
 <section id="top5">
   <h2>最值得去嘅 5 個</h2>
 
-  <article class="pick">
-    <h3><span class="n">1.</span>Family Style Food Fest</h3>
-    <p class="meta">六日 12:00–20:00｜西九文化區藝術公園大草坪</p>
-    <p>Complex 美食節首度喺亞洲獨立辦，韓式專區、本地「花美麗邨」檔口、DJ 同名廚（Eddie Huang、Jason Oh、《黑白大廚》相關、米芝蓮 Neighborhood 的 David Lai）。葵涌美食嘉年華已完，想去大型戶外食節呢個最有規模。單日普通票報道約 $228 起，VIP 另計。</p>
-    <p class="src">官方：<a href="https://familystyleasia.com/" target="_blank" rel="noopener">https://familystyleasia.com/</a></p>
-    <p class="src">售票：<a href="https://familystyleasia.com/ticketing" target="_blank" rel="noopener">https://familystyleasia.com/ticketing</a></p>
-    <p>（亦有 Klook／Trip.com）</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/feat-01-family-style.jpg" alt="Family Style Food Fest" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <p class="num">1</p>
+      <h3 class="title">Family Style Food Fest</h3>
+      <p class="place">西九文化區藝術公園大草坪</p>
+      <div class="content">
+        <p>六日 12:00–20:00</p>
+        <p>Complex 美食節首度喺亞洲獨立辦，韓式專區、本地「花美麗邨」檔口、DJ 同名廚（Eddie Huang、Jason Oh、《黑白大廚》相關、米芝蓮 Neighborhood 的 David Lai）。葵涌美食嘉年華已完，想去大型戶外食節呢個最有規模。單日普通票報道約 $228 起，VIP 另計。（亦有 Klook／Trip.com）</p>
+      </div>
+      <div class="links">
+        <a href="https://familystyleasia.com/" target="_blank" rel="noopener"><span class="name">官方網站</span><span class="domain">familystyleasia.com</span></a>
+        <a href="https://familystyleasia.com/ticketing" target="_blank" rel="noopener"><span class="name">官方售票</span><span class="domain">familystyleasia.com/ticketing</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="pick">
-    <h3><span class="n">2.</span>旅發局「香港繽紛冬日巡禮」（三區都開）</h3>
-    <p>中環、尖沙咀繼續免費睇燈；銅鑼灣今個先係第一個完整週末。</p>
-    <p>中環皇后像廣場週末 11:00–23:30（6 時亮燈）；尖沙咀文化中心一帶 19:00–23:00 光影；銅鑼灣利園區光影 19:00–22:00，戶外精靈酒吧 17:30–22:00。銅鑼灣聖誕市集要 12 月中先開，呢個週末唔好撲空去搵市集。</p>
-    <p class="src">總覽：<a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest.html" target="_blank" rel="noopener">https://www.discoverhongkong.com/tc/events/hong-kong-winterfest.html</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/feat-02-winterfest.jpg" alt="旅發局「香港繽紛冬日巡禮」（三區都開）" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <p class="num">2</p>
+      <h3 class="title">旅發局「香港繽紛冬日巡禮」（三區都開）</h3>
+      <p class="place">中環皇后像廣場、尖沙咀文化中心一帶、銅鑼灣利園區</p>
+      <div class="content">
+        <p>中環、尖沙咀繼續免費睇燈；銅鑼灣今個先係第一個完整週末。</p>
+        <p>中環皇后像廣場週末 11:00–23:30（6 時亮燈）；尖沙咀文化中心一帶 19:00–23:00 光影；銅鑼灣利園區光影 19:00–22:00，戶外精靈酒吧 17:30–22:00。銅鑼灣聖誕市集要 12 月中先開，呢個週末唔好撲空去搵市集。</p>
+      </div>
+      <div class="links">
+        <a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest.html" target="_blank" rel="noopener"><span class="name">旅發局總覽</span><span class="domain">discoverhongkong.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="pick">
-    <h3><span class="n">3.</span>FIBA 3x3 世界巡迴賽——香港大師賽</h3>
-    <p class="meta">只 11/28–29｜維園 1–3 號足球場</p>
-    <p>國際三人籃球賽，主場有 Team Hong Kong。「3x3 Village」嘉年華 11/27–29 免費；睇賽事要另買飛（主辦公布：六第一節 $20/$40/$60，其後時段較貴，日場再高）。順路可去維園 V Mart。</p>
-    <p class="src"><a href="https://www.discoverhongkong.com/tc/events/event.id91423.fiba-3x3%E4%B8%96%E7%95%8C%E5%B7%AA%E8%BF%B4%E8%B3%BD-%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%B8%AB%E8%B3%BD2026.html" target="_blank" rel="noopener">https://www.discoverhongkong.com/tc/events/event.id91423.fiba-3x3%E4%B8%96%E7%95%8C%E5%B7%AA%E8%BF%B4%E8%B3%BD-%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%B8%AB%E8%B3%BD2026.html</a></p>
-    <p class="src">Trip.com／主辦：<a href="https://www.3x3hkg.com/post/124/post-WTHK2026-Press-Con" target="_blank" rel="noopener">https://www.3x3hkg.com/post/124/post-WTHK2026-Press-Con</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/feat-03-fiba-3x3.jpg" alt="FIBA 3x3 世界巡迴賽——香港大師賽" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <p class="num">3</p>
+      <h3 class="title">FIBA 3x3 世界巡迴賽——香港大師賽</h3>
+      <p class="place">維園 1–3 號足球場</p>
+      <div class="content">
+        <p>只 11/28–29</p>
+        <p>國際三人籃球賽，主場有 Team Hong Kong。「3x3 Village」嘉年華 11/27–29 免費；睇賽事要另買飛（主辦公布：六第一節 $20/$40/$60，其後時段較貴，日場再高）。順路可去維園 V Mart。</p>
+      </div>
+      <div class="links">
+        <a href="https://www.discoverhongkong.com/tc/events/event.id91423.fiba-3x3%E4%B8%96%E7%95%8C%E5%B7%AA%E8%BF%B4%E8%B3%BD-%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%B8%AB%E8%B3%BD2026.html" target="_blank" rel="noopener"><span class="name">旅發局活動頁</span><span class="domain">discoverhongkong.com</span></a>
+        <a href="https://www.3x3hkg.com/post/124/post-WTHK2026-Press-Con" target="_blank" rel="noopener"><span class="name">Trip.com／主辦</span><span class="domain">3x3hkg.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="pick">
-    <h3><span class="n">4.</span>「今個聖誕碳水自由」麵包市集 @ 南豐紗廠</h3>
-    <p class="meta">11/27–29（本週末就喺紗廠；AIRSIDE 站係 12/4–6，呢個週末唔喺啟德）12:00–18:00｜六廠一樓</p>
-    <p>報道指 50 間以上烘焙店，市集免費入場。六當日另有「酸種麵包派對」（報道約 $250，分兩場），想參加要另購。</p>
-    <p class="src">報道整理：<a href="https://www.u4get.com/2026/11/14/carbs-freedom-fest-bread-market/" target="_blank" rel="noopener">https://www.u4get.com/2026/11/14/carbs-freedom-fest-bread-market/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-carbs-freedom.jpg" alt="「今個聖誕碳水自由」麵包市集 @ 南豐紗廠" width="1583" height="650" loading="lazy"></div>
+    <div class="card-body">
+      <p class="num">4</p>
+      <h3 class="title">「今個聖誕碳水自由」麵包市集 @ 南豐紗廠</h3>
+      <p class="place">南豐紗廠六廠一樓</p>
+      <div class="content">
+        <p>11/27–29（本週末就喺紗廠；AIRSIDE 站係 12/4–6，呢個週末唔喺啟德）12:00–18:00</p>
+        <p>報道指 50 間以上烘焙店，市集免費入場。六當日另有「酸種麵包派對」（報道約 $250，分兩場），想參加要另購。</p>
+      </div>
+      <div class="links">
+        <a href="https://www.u4get.com/2026/11/14/carbs-freedom-fest-bread-market/" target="_blank" rel="noopener"><span class="name">報道整理</span><span class="domain">u4get.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="pick">
-    <h3><span class="n">5.</span>粵劇日 2026</h3>
-    <p class="meta">只 11/29（日）下午（報道整理約 14:00–17:30，以康文署節目頁為準）｜香港文化中心室內及戶外</p>
-    <p>全免：折子戲、工作坊、攤位、名伶簽名會等；部分工作坊要預先網上登記。散場後可留低睇尖沙咀冬日光影。</p>
-    <p class="src"><a href="https://www.info.gov.hk/gia/general/202611/12/P2026111200234.htm" target="_blank" rel="noopener">https://www.info.gov.hk/gia/general/202611/12/P2026111200234.htm</a></p>
-    <p class="src">康文署：<a href="https://www.lcsd.gov.hk/CE/CulturalService/Programme/tc/chinese_opera/programs_2023.html" target="_blank" rel="noopener">https://www.lcsd.gov.hk/CE/CulturalService/Programme/tc/chinese_opera/programs_2023.html</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/feat-05-opera-day.jpg" alt="粵劇日 2026" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <p class="num">5</p>
+      <h3 class="title">粵劇日 2026</h3>
+      <p class="place">香港文化中心室內及戶外</p>
+      <div class="content">
+        <p>只 11/29（日）下午（報道整理約 14:00–17:30，以康文署節目頁為準）</p>
+        <p>全免：折子戲、工作坊、攤位、名伶簽名會等；部分工作坊要預先網上登記。散場後可留低睇尖沙咀冬日光影。</p>
+      </div>
+      <div class="links">
+        <a href="https://www.info.gov.hk/gia/general/202611/12/P2026111200234.htm" target="_blank" rel="noopener"><span class="name">政府新聞公報</span><span class="domain">info.gov.hk</span></a>
+        <a href="https://www.lcsd.gov.hk/CE/CulturalService/Programme/tc/chinese_opera/programs_2023.html" target="_blank" rel="noopener"><span class="name">康文署節目頁</span><span class="domain">lcsd.gov.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <p class="also">順路亦值得去：PMQ deTour 2026（最後一個週末、免費）、銅鑼灣 2 Pants Weekend Market、啟德 AIRSIDE「咖啡漫步」+ 天璽．天市集 + 雙子匯 PenPen 文具節（可以一日行晒）。<br>
-  <span class="src">deTour：<a href="https://www.pmq.org.hk/event/detour-2026-design-festival/?lang=zh" target="_blank" rel="noopener">https://www.pmq.org.hk/event/detour-2026-design-festival/?lang=zh</a></span></p>
+  <p class="also">順路亦值得去：PMQ deTour 2026（最後一個週末、免費）、銅鑼灣 2 Pants Weekend Market、啟德 AIRSIDE「咖啡漫步」+ 天璽．天市集 + 雙子匯 PenPen 文具節（可以一日行晒）。</p>
+  <div class="links">
+    <a href="https://www.pmq.org.hk/event/detour-2026-design-festival/?lang=zh" target="_blank" rel="noopener"><span class="name">deTour 活動頁</span><span class="domain">pmq.org.hk</span></a>
+  </div>
 </section>
 
 <section id="outdoor">
   <h2>海濱／節慶／大型戶外</h2>
 
-  <article class="item">
-    <h3>Family Style Food Fest</h3>
-    <p class="meta">11/28–29 12:00–20:00｜西九藝術公園大草坪｜要票，約 $228 起</p>
-    <p class="src"><a href="https://familystyleasia.com/" target="_blank" rel="noopener">https://familystyleasia.com/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/feat-01-family-style.jpg" alt="Family Style Food Fest" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">Family Style Food Fest</h3>
+      <p class="place">西九藝術公園大草坪</p>
+      <div class="content"><p>11/28–29 12:00–20:00。要票，約 $228 起</p></div>
+      <div class="links">
+        <a href="https://familystyleasia.com/" target="_blank" rel="noopener"><span class="name">官方網站</span><span class="domain">familystyleasia.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>冬日小鎮．中環</h3>
-    <p class="meta">11/18–1/5｜本週末 11:00–23:30｜皇后像廣場｜免費；6 時亮燈；置地聖誕市集逢四至日，週末 12:00–22:00</p>
-    <p class="src"><a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-central.html" target="_blank" rel="noopener">https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-central.html</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-ww-central.jpg" alt="冬日小鎮．中環" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">冬日小鎮．中環</h3>
+      <p class="place">皇后像廣場</p>
+      <div class="content"><p>11/18–1/5｜本週末 11:00–23:30。免費；6 時亮燈；置地聖誕市集逢四至日，週末 12:00–22:00</p></div>
+      <div class="links">
+        <a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-central.html" target="_blank" rel="noopener"><span class="name">旅發局中環頁</span><span class="domain">discoverhongkong.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>冬日小鎮．尖沙咀</h3>
-    <p class="meta">同上檔期｜文化中心／藝術館／太空館外圍｜19:00–23:00 免費光影</p>
-    <p class="src"><a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html" target="_blank" rel="noopener">https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-ww-tst.jpg" alt="冬日小鎮．尖沙咀" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">冬日小鎮．尖沙咀</h3>
+      <p class="place">文化中心／藝術館／太空館外圍</p>
+      <div class="content"><p>同上檔期｜19:00–23:00 免費光影</p></div>
+      <div class="links">
+        <a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html" target="_blank" rel="noopener"><span class="name">旅發局尖沙咀頁</span><span class="domain">discoverhongkong.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>冬日小鎮．銅鑼灣</h3>
-    <p class="meta">11/25–1/3｜利園區｜光影 19:00–22:00；戶外精靈酒吧 17:30–22:00｜免費；聖誕市集要 12 月中先開</p>
-    <p class="src"><a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-causeway-bay.html" target="_blank" rel="noopener">https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-causeway-bay.html</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-ww-cwb.jpg" alt="冬日小鎮．銅鑼灣" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">冬日小鎮．銅鑼灣</h3>
+      <p class="place">利園區</p>
+      <div class="content"><p>11/25–1/3｜光影 19:00–22:00；戶外精靈酒吧 17:30–22:00。免費；聖誕市集要 12 月中先開</p></div>
+      <div class="links">
+        <a href="https://www.discoverhongkong.com/tc/events/hong-kong-winterfest/winter-wonderland-in-causeway-bay.html" target="_blank" rel="noopener"><span class="name">旅發局銅鑼灣頁</span><span class="domain">discoverhongkong.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>閃爍尖東耀香江 2026</h3>
-    <p class="meta">至 1/3｜每日約 18:00–23:00｜尖東海濱長廊｜免費燈飾</p>
-    <p class="src"><a href="https://www.discoverhongkong.com/tc/events/event.id92022.%E9%96%83%E7%88%8D%E5%B0%96%E6%9D%B1%E8%80%80%E9%A6%99%E6%B1%9F2026.html" target="_blank" rel="noopener">https://www.discoverhongkong.com/tc/events/event.id92022.%E9%96%83%E7%88%8D%E5%B0%96%E6%9D%B1%E8%80%80%E9%A6%99%E6%B1%9F2026.html</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-tst-east.jpg" alt="閃爍尖東耀香江 2026" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">閃爍尖東耀香江 2026</h3>
+      <p class="place">尖東海濱長廊</p>
+      <div class="content"><p>至 1/3｜每日約 18:00–23:00。免費燈飾</p></div>
+      <div class="links">
+        <a href="https://www.discoverhongkong.com/tc/events/event.id92022.%E9%96%83%E7%88%8D%E5%B0%96%E6%9D%B1%E8%80%80%E9%A6%99%E6%B1%9F2026.html" target="_blank" rel="noopener"><span class="name">旅發局活動頁</span><span class="domain">discoverhongkong.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>FIBA 3x3 香港大師賽</h3>
-    <p class="meta">賽事 11/28–29；Village 11/27–29｜維園 1–3 號足球場｜嘉年華免費，睇波要票</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/feat-03-fiba-3x3.jpg" alt="FIBA 3x3 香港大師賽" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">FIBA 3x3 香港大師賽</h3>
+      <p class="place">維園 1–3 號足球場</p>
+      <div class="content"><p>賽事 11/28–29；Village 11/27–29。嘉年華免費，睇波要票</p></div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>粵劇日 2026</h3>
-    <p class="meta">只 11/29 下午｜文化中心｜免費</p>
-    <p class="src"><a href="https://www.info.gov.hk/gia/general/202611/12/P2026111200234.htm" target="_blank" rel="noopener">https://www.info.gov.hk/gia/general/202611/12/P2026111200234.htm</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/feat-05-opera-day.jpg" alt="粵劇日 2026" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">粵劇日 2026</h3>
+      <p class="place">文化中心</p>
+      <div class="content"><p>只 11/29 下午。免費</p></div>
+      <div class="links">
+        <a href="https://www.info.gov.hk/gia/general/202611/12/P2026111200234.htm" target="_blank" rel="noopener"><span class="name">政府新聞公報</span><span class="domain">info.gov.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>船到橋頭生活節</h3>
-    <p class="meta">本週末主場改去坪洲（上週末梅窩 wknd 市集已完）；六、日有導賞、工作坊、放映、表演等，部分要報名。長洲／坪洲亦有週末展覽裝置。</p>
-    <p class="src"><a href="https://www.interislandfestival.live/iif3-2026-events" target="_blank" rel="noopener">https://www.interislandfestival.live/iif3-2026-events</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-inter-island.jpg" alt="船到橋頭生活節" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">船到橋頭生活節</h3>
+      <p class="place">坪洲（本週末主場）</p>
+      <div class="content"><p>本週末主場改去坪洲（上週末梅窩 wknd 市集已完）；六、日有導賞、工作坊、放映、表演等，部分要報名。長洲／坪洲亦有週末展覽裝置。</p></div>
+      <div class="links">
+        <a href="https://www.interislandfestival.live/iif3-2026-events" target="_blank" rel="noopener"><span class="name">主辦活動頁</span><span class="domain">interislandfestival.live</span></a>
+      </div>
+    </div>
   </article>
 </section>
 
 <section id="markets">
   <h2>市集</h2>
 
-  <article class="item">
-    <h3>2 Pants Weekend Market @ Fashion Walk</h3>
-    <p class="meta">商場頁列 11/21–29；報道整理本週末 12:00–19:00｜銅鑼灣百德新街 57 號 8FIVE2 店外｜六有 B-boy 比賽（12:00–18:00），日有滑板對抗賽（15:00–18:00）</p>
-    <p class="src"><a href="https://www.hanglungmalls.com/whats-happening/6af6cceb56872a000216f3f0" target="_blank" rel="noopener">https://www.hanglungmalls.com/whats-happening/6af6cceb56872a000216f3f0</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-2-pants.jpg" alt="2 Pants Weekend Market @ Fashion Walk" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">2 Pants Weekend Market @ Fashion Walk</h3>
+      <p class="place">銅鑼灣百德新街 57 號 8FIVE2 店外</p>
+      <div class="content"><p>商場頁列 11/21–29；報道整理本週末 12:00–19:00。六有 B-boy 比賽（12:00–18:00），日有滑板對抗賽（15:00–18:00）</p></div>
+      <div class="links">
+        <a href="https://www.hanglungmalls.com/whats-happening/6af6cceb56872a000216f3f0" target="_blank" rel="noopener"><span class="name">恒隆商場活動頁</span><span class="domain">hanglungmalls.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>食雞翼 × 白紙市集「獨 Sek⁶ 難肥」</h3>
-    <p class="meta">11/28–29 12:00–21:00｜朗豪坊 L9–L12 長廊｜免費；集貼紙可換紀念品</p>
-    <p class="src"><a href="https://www.langhamplace.com.hk/zh-hk/happenings/1015" target="_blank" rel="noopener">https://www.langhamplace.com.hk/zh-hk/happenings/1015</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-langham-wings.jpg" alt="食雞翼 × 白紙市集「獨 Sek⁶ 難肥」" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">食雞翼 × 白紙市集「獨 Sek⁶ 難肥」</h3>
+      <p class="place">朗豪坊 L9–L12 長廊</p>
+      <div class="content"><p>11/28–29 12:00–21:00。免費；集貼紙可換紀念品</p></div>
+      <div class="links">
+        <a href="https://www.langhamplace.com.hk/zh-hk/happenings/1015" target="_blank" rel="noopener"><span class="name">朗豪坊活動頁</span><span class="domain">langhamplace.com.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>愉景灣聖誕市集</h3>
-    <p class="meta">11/28–29 11:00–18:00｜愉景廣場｜Handmade Hong Kong 手作市集</p>
-    <p class="src"><a href="https://www.handmadehongkong.com/zh/event/discovery-bay-christmas-market-28th-november-2026/" target="_blank" rel="noopener">https://www.handmadehongkong.com/zh/event/discovery-bay-christmas-market-28th-november-2026/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-db-christmas-market.jpg" alt="愉景灣聖誕市集" width="1536" height="960" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">愉景灣聖誕市集</h3>
+      <p class="place">愉景廣場</p>
+      <div class="content"><p>11/28–29 11:00–18:00。Handmade Hong Kong 手作市集</p></div>
+      <div class="links">
+        <a href="https://www.handmadehongkong.com/zh/event/discovery-bay-christmas-market-28th-november-2026/" target="_blank" rel="noopener"><span class="name">Handmade Hong Kong</span><span class="domain">handmadehongkong.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>V Mart 維園市集</h3>
-    <p class="meta">報道指本週末 12:00–21:00｜南亭廣場｜同期維園有 3x3 賽事，時間或場地或會調整，出發前再對</p>
-    <p class="src"><a href="https://www.hkhandicraft.com/fair/detail/id/zkpmOdyb" target="_blank" rel="noopener">https://www.hkhandicraft.com/fair/detail/id/zkpmOdyb</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-v-mart.jpg" alt="V Mart 維園市集" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">V Mart 維園市集</h3>
+      <p class="place">南亭廣場</p>
+      <div class="content"><p>報道指本週末 12:00–21:00。同期維園有 3x3 賽事，時間或場地或會調整，出發前再對</p></div>
+      <div class="links">
+        <a href="https://www.hkhandicraft.com/fair/detail/id/zkpmOdyb" target="_blank" rel="noopener"><span class="name">香港手作市集頁</span><span class="domain">hkhandicraft.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>SOHO MARKET 11月生活市集 @ D·PARK</h3>
-    <p class="meta">11/28–29 12:00–20:00｜荃灣愉景新城 L2</p>
-    <p class="src"><a href="https://hkhandicraft.com/fair/detail/id/7D16YjRp" target="_blank" rel="noopener">https://hkhandicraft.com/fair/detail/id/7D16YjRp</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-soho-market.jpg" alt="SOHO MARKET 11月生活市集 @ D·PARK" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">SOHO MARKET 11月生活市集 @ D·PARK</h3>
+      <p class="place">荃灣愉景新城 L2</p>
+      <div class="content"><p>11/28–29 12:00–20:00</p></div>
+      <div class="links">
+        <a href="https://hkhandicraft.com/fair/detail/id/7D16YjRp" target="_blank" rel="noopener"><span class="name">香港手作市集頁</span><span class="domain">hkhandicraft.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>北角匯「黑白配」美食市集</h3>
-    <p class="meta">11/28–29 13:00–20:00｜北角匯一期地下長廊｜黑芝麻、豆乳、豆腐花等甜品</p>
-    <p class="src"><a href="https://www.hkhandicraft.com/fair/detail/id/ZkeA9xkY" target="_blank" rel="noopener">https://www.hkhandicraft.com/fair/detail/id/ZkeA9xkY</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-harbour-north-market.jpg" alt="北角匯「黑白配」美食市集" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">北角匯「黑白配」美食市集</h3>
+      <p class="place">北角匯一期地下長廊</p>
+      <div class="content"><p>11/28–29 13:00–20:00。黑芝麻、豆乳、豆腐花等甜品</p></div>
+      <div class="links">
+        <a href="https://www.hkhandicraft.com/fair/detail/id/ZkeA9xkY" target="_blank" rel="noopener"><span class="name">香港手作市集頁</span><span class="domain">hkhandicraft.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>天璽．天Mall 聖誕市集</h3>
-    <p class="meta">11/27–29 12:00–20:00｜B1（連接 AIRSIDE 行人通路）｜手作、飾物、食品</p>
-    <p class="src"><a href="https://hkhandicraft.com/fair/detail/id/VylKEdk0" target="_blank" rel="noopener">https://hkhandicraft.com/fair/detail/id/VylKEdk0</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-the-farm-mall.jpg" alt="天璽．天Mall 聖誕市集" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">天璽．天Mall 聖誕市集</h3>
+      <p class="place">B1（連接 AIRSIDE 行人通路）</p>
+      <div class="content"><p>11/27–29 12:00–20:00。手作、飾物、食品</p></div>
+      <div class="links">
+        <a href="https://hkhandicraft.com/fair/detail/id/VylKEdk0" target="_blank" rel="noopener"><span class="name">香港手作市集頁</span><span class="domain">hkhandicraft.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>AIRSIDE x MIJ Market「咖啡漫步」</h3>
-    <p class="meta">11/26–29｜4 樓本地品牌區 27–29 日 11:30–20:00 免費；地下日本品牌區 13:30–20:00；最後進場 19:15｜品飲通行證另購</p>
-    <p class="src"><a href="https://www.airside.com.hk/zh-hk/event/AIRSIDE-x-MIJ-Market-Coffee-Journey-Tasting-Pass" target="_blank" rel="noopener">https://www.airside.com.hk/zh-hk/event/AIRSIDE-x-MIJ-Market-Coffee-Journey-Tasting-Pass</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-airside-coffee.jpg" alt="AIRSIDE x MIJ Market「咖啡漫步」" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">AIRSIDE x MIJ Market「咖啡漫步」</h3>
+      <p class="place">AIRSIDE 4 樓本地品牌區／地下日本品牌區</p>
+      <div class="content"><p>11/26–29｜4 樓本地品牌區 27–29 日 11:30–20:00 免費；地下日本品牌區 13:30–20:00；最後進場 19:15。品飲通行證另購</p></div>
+      <div class="links">
+        <a href="https://www.airside.com.hk/zh-hk/event/AIRSIDE-x-MIJ-Market-Coffee-Journey-Tasting-Pass" target="_blank" rel="noopener"><span class="name">AIRSIDE 活動頁</span><span class="domain">airside.com.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>「今個聖誕碳水自由」麵包市集 @ 南豐紗廠</h3>
-    <p class="meta">11/27–29 12:00–18:00｜六廠一樓｜市集免費；AIRSIDE 站 12/4–6，未到</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-carbs-freedom.jpg" alt="「今個聖誕碳水自由」麵包市集 @ 南豐紗廠" width="1583" height="650" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">「今個聖誕碳水自由」麵包市集 @ 南豐紗廠</h3>
+      <p class="place">南豐紗廠六廠一樓</p>
+      <div class="content"><p>11/27–29 12:00–18:00。市集免費；AIRSIDE 站 12/4–6，未到</p></div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>iSQUARE 冬日聖誕市集</h3>
-    <p class="meta">報道指 11/28–29 12:00–20:00｜3 樓 iFUNCTION</p>
-    <p class="src">整理：<a href="https://konggokhk.com/isquare_mewky_christmas_2026/" target="_blank" rel="noopener">https://konggokhk.com/isquare_mewky_christmas_2026/</a></p>
+  <article class="card">
+    <div class="card-body">
+      <h3 class="title">iSQUARE 冬日聖誕市集</h3>
+      <p class="place">3 樓 iFUNCTION</p>
+      <div class="content"><p>報道指 11/28–29 12:00–20:00</p></div>
+      <div class="links">
+        <a href="https://konggokhk.com/isquare_mewky_christmas_2026/" target="_blank" rel="noopener"><span class="name">報道整理</span><span class="domain">konggokhk.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>Figurecross The Lab Market @ 德福廣場</h3>
-    <p class="meta">呢期至 12/3｜每日約 12:00–20:00｜MCL 戲院平台入口樓層</p>
-    <p class="src"><a href="https://www.hkhandicraft.com/fair/detail/id/Lk7vBbRo" target="_blank" rel="noopener">https://www.hkhandicraft.com/fair/detail/id/Lk7vBbRo</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-figurecross-the-lab.jpg" alt="Figurecross The Lab Market @ 德福廣場" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">Figurecross The Lab Market @ 德福廣場</h3>
+      <p class="place">MCL 戲院平台入口樓層</p>
+      <div class="content"><p>呢期至 12/3｜每日約 12:00–20:00</p></div>
+      <div class="links">
+        <a href="https://www.hkhandicraft.com/fair/detail/id/Lk7vBbRo" target="_blank" rel="noopener"><span class="name">香港手作市集頁</span><span class="domain">hkhandicraft.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>PenPen Festa 香港國際文具節</h3>
-    <p class="meta">11/28–29 12:00–19:00｜啟德雙子匯一期 10F TT Site（協調道 12 號，啟德站 B1）｜單日 $50／兩日 $90，特惠 $25／$45，11 歲以下免費</p>
-    <p class="src"><a href="https://www.penpenfesta.com/tc/visit.php" target="_blank" rel="noopener">https://www.penpenfesta.com/tc/visit.php</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-penpen-festa.jpg" alt="PenPen Festa 香港國際文具節" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">PenPen Festa 香港國際文具節</h3>
+      <p class="place">啟德雙子匯一期 10F TT Site（協調道 12 號，啟德站 B1）</p>
+      <div class="content"><p>11/28–29 12:00–19:00。單日 $50／兩日 $90，特惠 $25／$45，11 歲以下免費</p></div>
+      <div class="links">
+        <a href="https://www.penpenfesta.com/tc/visit.php" target="_blank" rel="noopener"><span class="name">官方參觀頁</span><span class="domain">penpenfesta.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>Meow Festival 2026 @ 數碼港</h3>
-    <p class="meta">11/28–29 12:00–18:00｜CyberArena｜貓展、獸醫講座、貓咪市集；參賽另計（專業貓展 $400、Fun Show $100）。商場頁未列明公眾入場費，以現場／主辦為準</p>
-    <p class="src"><a href="https://arcade.cyberport.hk/eventpromotion/meow_carnival?l=zh-tw" target="_blank" rel="noopener">https://arcade.cyberport.hk/eventpromotion/meow_carnival?l=zh-tw</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-meow-festival.jpg" alt="Meow Festival 2026 @ 數碼港" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">Meow Festival 2026 @ 數碼港</h3>
+      <p class="place">CyberArena</p>
+      <div class="content"><p>11/28–29 12:00–18:00。貓展、獸醫講座、貓咪市集；參賽另計（專業貓展 $400、Fun Show $100）。商場頁未列明公眾入場費，以現場／主辦為準</p></div>
+      <div class="links">
+        <a href="https://arcade.cyberport.hk/eventpromotion/meow_carnival?l=zh-tw" target="_blank" rel="noopener"><span class="name">數碼港商場活動頁</span><span class="domain">arcade.cyberport.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>廟街「廟街夜繽紛」</h3>
-    <p class="meta">仍每日約 14:00–23:00（佐敦道至南京街段）</p>
+  <article class="card">
+    <div class="card-body">
+      <h3 class="title">廟街「廟街夜繽紛」</h3>
+      <p class="place">佐敦道至南京街段</p>
+      <div class="content"><p>仍每日約 14:00–23:00</p></div>
+    </div>
   </article>
 </section>
 
 <section id="exhibitions">
   <h2>展覽／設計／商場聖誕</h2>
 
-  <article class="item">
-    <h3>deTour 2026 @ PMQ</h3>
-    <p class="meta">至 11/29｜本週末 11:00–20:00｜免費｜最後一個週末</p>
-    <p class="src"><a href="https://www.pmq.org.hk/event/detour-2026-design-festival/?lang=zh" target="_blank" rel="noopener">https://www.pmq.org.hk/event/detour-2026-design-festival/?lang=zh</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-detour-2026.jpg" alt="deTour 2026 @ PMQ" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">deTour 2026 @ PMQ</h3>
+      <p class="place">PMQ</p>
+      <div class="content"><p>至 11/29｜本週末 11:00–20:00。免費｜最後一個週末</p></div>
+      <div class="links">
+        <a href="https://www.pmq.org.hk/event/detour-2026-design-festival/?lang=zh" target="_blank" rel="noopener"><span class="name">deTour 活動頁</span><span class="domain">pmq.org.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>「盛禮薈萃──民族文化展覽」</h3>
-    <p class="meta">至 11/29｜文化中心大堂｜免費；整理指六 09:00–23:00、日 09:00–17:00（Sunday 較早收）</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-ethnic-exhibition.jpg" alt="「盛禮薈萃──民族文化展覽」" width="1600" height="900" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">「盛禮薈萃──民族文化展覽」</h3>
+      <p class="place">文化中心大堂</p>
+      <div class="content"><p>至 11/29。免費；整理指六 09:00–23:00、日 09:00–17:00（Sunday 較早收）</p></div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>高田明美世界名作展 @ 海港城</h3>
-    <p class="meta">至 11/29（最後一個週末）11:00–21:00｜海港城美術館｜免費</p>
-    <p class="src"><a href="https://www.harbourcity.com.hk/tc/article/takada-akemi-world-masterpiece-exhibition-2026/" target="_blank" rel="noopener">https://www.harbourcity.com.hk/tc/article/takada-akemi-world-masterpiece-exhibition-2026/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-takada-akemi.jpg" alt="高田明美世界名作展 @ 海港城" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">高田明美世界名作展 @ 海港城</h3>
+      <p class="place">海港城美術館</p>
+      <div class="content"><p>至 11/29（最後一個週末）11:00–21:00。免費</p></div>
+      <div class="links">
+        <a href="https://www.harbourcity.com.hk/tc/article/takada-akemi-world-masterpiece-exhibition-2026/" target="_blank" rel="noopener"><span class="name">海港城活動頁</span><span class="domain">harbourcity.com.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>2026 香港國際中醫藥博覽會</h3>
-    <p class="meta">只至 11/28（六）｜會展廳 3E｜報道指公眾免費；最後一日，出發前再對時間同會場安排</p>
-    <p class="src">文匯報道：<a href="https://www.wenweipo.com/a/202611/19/AP6afe85cfe4b028ec0194a79b.html" target="_blank" rel="noopener">https://www.wenweipo.com/a/202611/19/AP6afe85cfe4b028ec0194a79b.html</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-tcm-expo.jpg" alt="2026 香港國際中醫藥博覽會" width="1080" height="607" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">2026 香港國際中醫藥博覽會</h3>
+      <p class="place">會展廳 3E</p>
+      <div class="content"><p>只至 11/28（六）。報道指公眾免費；最後一日，出發前再對時間同會場安排</p></div>
+      <div class="links">
+        <a href="https://www.wenweipo.com/a/202611/19/AP6afe85cfe4b028ec0194a79b.html" target="_blank" rel="noopener"><span class="name">文匯報道</span><span class="domain">wenweipo.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>新城市廣場「星願水晶殿」</h3>
-    <p class="meta">11/25–1/3｜報道／活動整理每日 10:00–22:00｜沙田｜第一個完整週末</p>
-    <p class="src"><a href="https://www.newtownplaza.com.hk/zh-hant/精彩活動/「New-Town-Crystal-Palace-星願水晶殿」華麗登場/" target="_blank" rel="noopener">https://www.newtownplaza.com.hk/zh-hant/精彩活動/「New-Town-Crystal-Palace-星願水晶殿」華麗登場/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-crystal-palace.jpg" alt="新城市廣場「星願水晶殿」" width="1200" height="750" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">新城市廣場「星願水晶殿」</h3>
+      <p class="place">沙田</p>
+      <div class="content"><p>11/25–1/3｜報道／活動整理每日 10:00–22:00。第一個完整週末</p></div>
+      <div class="links">
+        <a href="https://www.newtownplaza.com.hk/zh-hant/精彩活動/「New-Town-Crystal-Palace-星願水晶殿」華麗登場/" target="_blank" rel="noopener"><span class="name">新城市廣場活動頁</span><span class="domain">newtownplaza.com.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>北角匯 x TomBonia「冬日泡泡聖誕樂園」</h3>
-    <p class="meta">11/21–1/13｜報道每日 10:00–22:00｜4 米萌貓、水晶球彈床等</p>
-    <p class="src">整理：<a href="https://www.u4get.com/2026/11/22/harbour-north-tombonia-bubble-xmas/" target="_blank" rel="noopener">https://www.u4get.com/2026/11/22/harbour-north-tombonia-bubble-xmas/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-tombonia.jpg" alt="北角匯 x TomBonia「冬日泡泡聖誕樂園」" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">北角匯 x TomBonia「冬日泡泡聖誕樂園」</h3>
+      <p class="place">北角匯</p>
+      <div class="content"><p>11/21–1/13｜報道每日 10:00–22:00。4 米萌貓、水晶球彈床等</p></div>
+      <div class="links">
+        <a href="https://www.u4get.com/2026/11/22/harbour-north-tombonia-bubble-xmas/" target="_blank" rel="noopener"><span class="name">報道整理</span><span class="domain">u4get.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>朗豪坊 Hello Kitty Bowtiful Christmas</h3>
-    <p class="meta">報道指 11/29 起向公眾開放（11/28 只限中選 Sanrio Smile HK 會員）10:30–22:30｜4 樓通天廣場</p>
-    <p class="src">整理：<a href="https://konggokhk.com/langham_place_hello_kitty_bowtiful_christmas_2026/" target="_blank" rel="noopener">https://konggokhk.com/langham_place_hello_kitty_bowtiful_christmas_2026/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-hello-kitty.jpg" alt="朗豪坊 Hello Kitty Bowtiful Christmas" width="1600" height="900" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">朗豪坊 Hello Kitty Bowtiful Christmas</h3>
+      <p class="place">4 樓通天廣場</p>
+      <div class="content"><p>報道指 11/29 起向公眾開放（11/28 只限中選 Sanrio Smile HK 會員）10:30–22:30</p></div>
+      <div class="links">
+        <a href="https://konggokhk.com/langham_place_hello_kitty_bowtiful_christmas_2026/" target="_blank" rel="noopener"><span class="name">報道整理</span><span class="domain">konggokhk.com</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>MOKO「Disney Stitch, Mickey &amp; Friends 薄荷朱古力慶典」</h3>
-    <p class="meta">至 1/3｜打卡裝置報道每日 10:00–22:00；限定店 11:00–22:00｜MTR 層中庭</p>
-    <p class="src"><a href="https://www.moko.com.hk/promotions/moko%E3%80%8Cdisney-stitch-mickey-friends%E8%96%84%E8%8D%B7%E6%9C%B1%E5%8F%A4%E5%8A%9B%E6%85%B6%E5%85%B8%E3%80%8D/" target="_blank" rel="noopener">https://www.moko.com.hk/promotions/moko%E3%80%8Cdisney-stitch-mickey-friends%E8%96%84%E8%8D%B7%E6%9C%B1%E5%8F%A4%E5%8A%9B%E6%85%B6%E5%85%B8%E3%80%8D/</a></p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-moko-stitch.jpg" alt="MOKO「Disney Stitch, Mickey &amp; Friends 薄荷朱古力慶典」" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">MOKO「Disney Stitch, Mickey &amp; Friends 薄荷朱古力慶典」</h3>
+      <p class="place">MTR 層中庭</p>
+      <div class="content"><p>至 1/3｜打卡裝置報道每日 10:00–22:00；限定店 11:00–22:00</p></div>
+      <div class="links">
+        <a href="https://www.moko.com.hk/promotions/moko%E3%80%8Cdisney-stitch-mickey-friends%E8%96%84%E8%8D%B7%E6%9C%B1%E5%8F%A4%E5%8A%9B%E6%85%B6%E5%85%B8%E3%80%8D/" target="_blank" rel="noopener"><span class="name">MOKO 活動頁</span><span class="domain">moko.com.hk</span></a>
+      </div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>奧海城 Teddy LuLu 聖誕時光之旅</h3>
-    <p class="meta">至 1/3 11:00–21:00｜2 期地下中庭｜11/29（日）有角色見面（報道：14:30、15:30、16:30 三節）</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-teddy-lulu.jpg" alt="奧海城 Teddy LuLu 聖誕時光之旅" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">奧海城 Teddy LuLu 聖誕時光之旅</h3>
+      <p class="place">2 期地下中庭</p>
+      <div class="content"><p>至 1/3 11:00–21:00。11/29（日）有角色見面（報道：14:30、15:30、16:30 三節）</p></div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>iSQUARE × MEWKY 奇幻聖誕裁縫店</h3>
-    <p class="meta">至 1/3｜免費打卡；本週末另有 3 樓市集</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-mewky.jpg" alt="iSQUARE × MEWKY 奇幻聖誕裁縫店" width="1191" height="893" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">iSQUARE × MEWKY 奇幻聖誕裁縫店</h3>
+      <p class="place">iSQUARE</p>
+      <div class="content"><p>至 1/3。免費打卡；本週末另有 3 樓市集</p></div>
+    </div>
   </article>
 
-  <article class="item">
-    <h3>AIRSIDE Pixar Holiday Magic</h3>
-    <p class="meta">至 1/3｜2 樓場景＋地下 6 米樹；戶外遊樂園攤位只限 12 月指定日，本週末冇</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-pixar-holiday-magic.jpg" alt="AIRSIDE Pixar Holiday Magic" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">AIRSIDE Pixar Holiday Magic</h3>
+      <p class="place">AIRSIDE 2 樓場景＋地下 6 米樹</p>
+      <div class="content"><p>至 1/3。戶外遊樂園攤位只限 12 月指定日，本週末冇</p></div>
+    </div>
   </article>
 
   <p class="foot-note">仲開（部分日期來自綜合導覽／報道，出發前再對商場官網）：ifc「聖誕夢幻航空」、海港城「Christmas Togetherness」聖誕火車站、太古廣場／星街、太古城 Festival of Wonders、MOSTown 貓主題、Mira Place、Landmark、又一城 Pokémon；又一城 BIGBANG《COSMOS》媒體展（11/18–12/27）要票，同已完嘅山頂免費展係兩件事。</p>
 
-  <article class="item">
-    <h3>東港城</h3>
-    <p class="meta">聖誕樹／雪地車展第一階段已完；Funko POP! 限定店報道仍開至 12/8，約 11:00–21:00｜1 樓中庭</p>
+  <article class="card">
+    <div class="card-media"><img src="assets/card-epc-funko.jpg" alt="東港城 Funko POP! 限定店" width="1600" height="1000" loading="lazy"></div>
+    <div class="card-body">
+      <h3 class="title">東港城</h3>
+      <p class="place">1 樓中庭</p>
+      <div class="content"><p>聖誕樹／雪地車展第一階段已完；Funko POP! 限定店報道仍開至 12/8，約 11:00–21:00</p></div>
+    </div>
   </article>
 </section>
 
-<section id="ended">
+<section id="ended" class="list-block">
   <h2>已完</h2>
   <p>第13屆香港美食嘉年華（至 11/1）；DesignInspire（至 11/21）；山頂 BIGBANG 免費展、皮克敏秋季收穫祭、The Big Picnic、亞裔藝采+、梅窩 wknd 市集（均至 11/22 左右）；西九爵士音樂節（至 11/24）；中環藝術貨櫃嘉年華（至 11/25）；AIRSIDE《嘔心食物博物館》（至 11/26）；618 上海街秋日市集、LIFE MART 九週年（均上週末）。</p>
 </section>
 
-<section id="later">
+<section id="later" class="list-block">
   <h2>未到本週末</h2>
   <p>Clockenflap 12/4–6；南豐紗廠麵包市集搬去 AIRSIDE 12/4–6；工展會 12/12 起（維園）；中港城車尾箱聖誕市集約 12/11 起；銅鑼灣冬日小鎮聖誕市集 12 月中。</p>
 </section>
